@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduConnect - Student Social Network</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-gray-100">
+    <!-- Navigation Bar -->
+    <nav class="bg-blue-600 text-white p-4 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center">
+                <h1 class="text-2xl font-bold mr-4"><i class="fas fa-graduation-cap mr-2"></i>EduConnect</h1>
+                <div class="hidden md:flex space-x-4">
+                    <a href="#" class="hover:text-blue-200"><i class="fas fa-home mr-1"></i> Home</a>
+                    <a href="#" class="hover:text-blue-200"><i class="fas fa-user-friends mr-1"></i> Friends</a>
+                    <a href="#" class="hover:text-blue-200"><i class="fas fa-video mr-1"></i> Videos</a>
+                </div>
+            </div>
+            
+            <div class="flex items-center space-x-4">
+                <div class="relative">
+                    <input type="text" placeholder="Search EduConnect" class="bg-blue-500 text-white px-4 py-2 rounded-full placeholder-blue-200">
+                    <i class="fas fa-search absolute right-3 top-2.5 text-blue-200"></i>
+                </div>
+                <div class="flex space-x-3">
+                    <a href="#" class="bg-blue-500 p-2 rounded-full hover:bg-blue-400"><i class="fas fa-user-circle"></i></a>
+                    <a href="#" class="bg-blue-500 p-2 rounded-full hover:bg-blue-400"><i class="fas fa-users"></i></a>
+                    <a href="#" class="bg-blue-500 p-2 rounded-full hover:bg-blue-400"><i class="fas fa-bell"></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mx-auto mt-4 flex flex-col md:flex-row">
+        <!-- Left Sidebar -->
+        <div class="w-full md:w-1/4 lg:w-1/5 mb-4 md:mb-0 md:mr-4">
+            <div class="bg-white rounded-lg shadow p-4">
+                <div class="flex items-center mb-4">
+                    <img src="https://via.placeholder.com/50" alt="Profile" class="rounded-full mr-3">
+                    <span class="font-semibold">John Student</span>
+                </div>
+                <hr class="my-2">
+                <a href="#" class="block py-2 text-gray-700 hover:bg-gray-100 rounded px-2"><i class="fas fa-user-friends mr-2"></i> Friends</a>
+                <a href="#" class="block py-2 text-gray-700 hover:bg-gray-100 rounded px-2"><i class="fas fa-users mr-2"></i> Groups</a>
+                <a href="#" class="block py-2 text-gray-700 hover:bg-gray-100 rounded px-2"><i class="fas fa-store mr-2"></i> Marketplace</a>
+                <a href="#" class="block py-2 text-gray-700 hover:bg-gray-100 rounded px-2"><i class="fas fa-video mr-2"></i> Videos</a>
+                <a href="#" class="block py-2 text-gray-700 hover:bg-gray-100 rounded px-2"><i class="fas fa-calendar mr-2"></i> Events</a>
+            </div>
+        </div>
+
+        <!-- Main Feed -->
+        <div class="w-full md:w-2/4 lg:w-3/5 mb-4 md:mb-0">
+            <!-- Create Post -->
+            <div class="bg-white rounded-lg shadow p-4 mb-4">
+                <div class="flex">
+                    <img src="https://via.placeholder.com/40" alt="Profile" class="rounded-full mr-3">
+                    <input type="text" placeholder="What's on your mind, John?" class="bg-gray-100 rounded-full px-4 py-2 flex-grow focus:outline-none">
+                </div>
+                <hr class="my-3">
+                <div class="flex justify-between">
+                    <button class="flex items-center text-gray-500 hover:bg-gray-100 rounded-lg p-2">
+                        <i class="fas fa-video text-red-500 mr-2"></i> Live Video
+                    </button>
+                    <button class="flex items-center text-gray-500 hover:bg-gray-100 rounded-lg p-2">
+                        <i class="fas fa-photo-video text-green-500 mr-2"></i> Photo/Video
+                    </button>
+                    <button class="flex items-center text-gray-500 hover:bg-gray-100 rounded-lg p-2">
+                        <i class="fas fa-laugh-beam text-yellow-500 mr-2"></i> Feeling/Activity
+                    </button>
+                </div>
+            </div>
+
+            <!-- Stories -->
+            <div class="bg-white rounded-lg shadow p-4 mb-4">
+                <div class="flex space-x-2 overflow-x-auto pb-2">
+                    <!-- Story items would go here -->
+                    <div class="story-item">Create Story</div>
+                    <div class="story-item">User Story 1</div>
+                    <div class="story-item">User Story 2</div>
+                    <div class="story-item">User Story 3</div>
+                </div>
+            </div>
+
+            <!-- Feed Posts -->
+            <div id="feed-posts">
+                <!-- Posts will be loaded here dynamically -->
+            </div>
+        </div>
+
+        <!-- Right Sidebar -->
+        <div class="w-full md:w-1/4 lg:w-1/5">
+            <div class="bg-white rounded-lg shadow p-4">
+                <h3 class="font-semibold mb-3">Friend Requests</h3>
+                <!-- Friend requests would go here -->
+                <div class="text-center py-4 text-gray-500">
+                    <i class="fas fa-user-friends text-3xl mb-2"></i>
+                    <p>No friend requests</p>
+                </div>
+                
+                <h3 class="font-semibold mb-3 mt-4">Online Friends</h3>
+                <!-- Online friends would go here -->
+                <div class="text-center py-4 text-gray-500">
+                    <i class="fas fa-comments text-3xl mb-2"></i>
+                    <p>No friends online</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Auth Modals -->
+    <!-- Login Modal -->
+    <!-- Register Modal -->
+    <!-- Forgot Password Modal -->
+
+    <script src="js/auth.js"></script>
+    <script src="js/feed.js"></script>
+</body>
+</html>
